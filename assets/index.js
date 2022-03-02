@@ -89,13 +89,18 @@ const simpleButton = document.getElementById("simpleFlipper");
 const hexButton = document.getElementById("hexFlipper");
 
 colorButton.addEventListener("click", changeColor);
+simpleButton.disabled = true;
 
 simpleButton.addEventListener("click", () => {
+	simpleButton.disabled = true;
+	hexButton.disabled = false;
 	colorButton.removeEventListener("click", changeColorHex);
 	colorButton.addEventListener("click", changeColor);
 });
 
 hexButton.addEventListener("click", () => {
+	hexButton.disabled = true;
+	simpleButton.disabled = false;
 	colorButton.removeEventListener("click", changeColor);
 	colorButton.addEventListener("click", changeColorHex);
 });
