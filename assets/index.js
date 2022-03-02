@@ -72,7 +72,6 @@ let hexGenerator = () => {
 
 const changeColorHex = () => {
 	let randomColor = hexGenerator();
-	console.log(randomColor);
 
 	document.getElementById("background").style.backgroundColor = randomColor;
 
